@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public int Score = 0;
+    public TextMeshProUGUI ScoreText;
     public bool SuperSexTime = true;
     public List<GameObject> Target;
     // Start is called before the first frame update
     void Start()
     {
+        ScoreText.text = "Score: " + Score;
         StartCoroutine(SpawnTarget());
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Cumin(int addToScore)
     {
-        
+        Score += addToScore;
+        Debug.Log("Score: " + Score.ToString());
+        ScoreText.text = "Score: " + Score.ToString();
     }
     IEnumerator SpawnTarget()
     {

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3553275381946521737}
   - component: {fileID: 3553275381946521734}
   - component: {fileID: 3553275381946521735}
-  - component: {fileID: 3553275381946521732}
+  - component: {fileID: 6251062754422633426}
   m_Layer: 0
   m_Name: Good 3
   m_TagString: Sex
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3553275381946521732
+--- !u!114 &6251062754422633426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,5 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointValue: 1
   MinSpeed: 10
-  MaxSpeed: 15
-  MaxTorque: 666
+  MaxSpeed: 14
+  MaxTorque: 10

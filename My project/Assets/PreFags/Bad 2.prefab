@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 76223780416950998}
   - component: {fileID: 76223780416950953}
   - component: {fileID: 76223780416950952}
-  - component: {fileID: 76223780416950996}
+  - component: {fileID: 8718894041125488414}
   m_Layer: 0
   m_Name: Bad 2
   m_TagString: Cum
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &76223780416950996
+--- !u!114 &8718894041125488414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3b03cd9b779434d8f5d4c742309e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: 1
-  MinSpeed: 10
-  MaxSpeed: 15
-  MaxTorque: 666
+  PointValue: 0
+  MinSpeed: 15
+  MaxSpeed: 25
+  MaxTorque: 10

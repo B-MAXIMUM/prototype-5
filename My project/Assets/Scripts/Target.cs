@@ -6,8 +6,9 @@ public class Target : MonoBehaviour
 {
     public int PointValue = 1;
     public float MinSpeed = 10;
-    public float MaxSpeed = 15;
-    public float MaxTorque= 100000000000000;
+    public float MaxSpeed = 20;
+    public float MaxTorque = 10;
+
     private Rigidbody2D _targetRb;
     private GameManager _gameManager;
 
@@ -15,7 +16,8 @@ public class Target : MonoBehaviour
     void Start()
     {
         _targetRb = GetComponent<Rigidbody2D>();
-        _gameManager = GameObject.Find("Game Manager").GetComponent<GameObject>();
+        _gameManager = GameObject.Find("Gay Manager").GetComponent<GameManager>();
+
         _targetRb.AddForce(Vector2.up * RandomizeForce(), ForceMode2D.Impulse);
         _targetRb.AddTorque(RandomizeTorque());
     }
@@ -25,24 +27,31 @@ public class Target : MonoBehaviour
     {
         
     }
+
     private float RandomizeForce()
     {
         return Random.Range(MinSpeed, MaxSpeed);
     }
+
     private float RandomizeTorque()
     {
         return Random.Range(-MaxTorque, MaxTorque);
     }
-   private void OnMouseDown() 
+
+    private void OnMouseDown()
     {
-        Destroy(this.gameObject);   
+        Debug.Log("you clicked on" + gameObject.name);
+        _gameManager.Cumin(PointValue);
+        Destroy(this.gameObject);
     }
-    private void OnTriggerEnter2D(Collider2D other) 
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(this.gameObject);
-        if(!other.gameObject.CompareTag("Sex"))
+
+        if(!other.gameObject.CompareTag("Cum"))
         {
-            Debug.Log("Game Over");
+            //Debug.Log("Game Over");
             _gameManager.SuperSexTime = false;
         }
     }
