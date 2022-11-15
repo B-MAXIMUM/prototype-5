@@ -49,10 +49,10 @@ public class Target : MonoBehaviour
     {
         Destroy(this.gameObject);
 
-        if(!other.gameObject.CompareTag("Cum"))
+        if(!gameObject.CompareTag("Cum"))
         {
             //Debug.Log("Game Over");
-            _gameManager.SuperSexTime = false;
+            _gameManager.GameOver();
         }
     }
 }
