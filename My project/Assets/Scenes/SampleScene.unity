@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1cad75a929dea409f1dedb35b5a6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dickculty: 3
+  Dickculty: 10000
 --- !u!114 &196586831
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int Score = 0;
-    public int SpawnRate = 1;
+    public float SpawnRate = 1;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI GameOverText;
     public Button RestartButton;
@@ -50,8 +50,11 @@ public class GameManager : MonoBehaviour
         while(SuperSexTime)
         {
             yield return new WaitForSeconds(SpawnRate);
+            float xPos = Random.Range(-4,4);
+            float yPos = -9;
+            Vector2 spawnPos = new Vector2 (xPos, yPos);
             int index = Random.Range(0, Target.Count);
-            Instantiate(Target[index]);
+            Instantiate(Target[index], spawnPos, Target[index].transform.rotation);
         }
         
     }
